@@ -9,8 +9,10 @@ import { useNavigate } from "react-router-dom";
 const SignUpPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
+  const uniqueId  = uuidv4()
+
   const initialValues = {
-    uid: uuidv4(),
+    // uid: uniqueId,
     name: "",
     age: "",
     gmail: "",

@@ -26,11 +26,14 @@ const LoginPage = () => {
     e.preventDefault();
     dispatch(loginAsync(formData))
   };
+  if (isLoading===false && error===false && user !== null && user !== undefined) {
+    navigate("/");
+  }
   useEffect(() => {
-    if (isLoading===false && error===false && user !== null) {
+    if (isLoading===false && error===false && user !== null && user !== undefined) {
       navigate("/");
     }
-  }, [isLoading, error, navigate]);
+  }, [user]);
 
 
 

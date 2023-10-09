@@ -66,7 +66,7 @@ function App() {
               />
               <Route
                 path="/checkout"
-                element={user ? <LazyCheckOutPage /> : <LazyLoginPage />}
+                element={<LazyCheckOutPage /> }
               />
               <Route path="/search/:query" element={<LazySearchResultPage />} />
               <Route path="/login" element={<LazyLoginPage />} />

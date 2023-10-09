@@ -5,6 +5,7 @@ import CartItems from "../components/CartItems";
 
 const ProfilePage = () => {
   const { user } = useSelector((state) => state.auth);
+
   const cartItems = useSelector((state) => state.cart);
 
   return (

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const CartDrawer = ({ isOpen, onClose }) => {
   const cartItems = useSelector((state) => state.cart);
+  const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
 
@@ -133,7 +134,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                 Shipping and taxes calculated at checkout.
               </p>
               <div class="mt-6">
-                <Link to="/checkout">
+                <Link to={user?'/checkout':'/login'}>
                   <button onClick={onClose} className="w-full flex items-center justify-center rounded-md border border-transparent bg-black px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700">
                     Checkout
                   </button>
